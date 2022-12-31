@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+SIZE=`exiftool ./photos/photo.png | grep 'Image Size' | awk -F ':' '{print $2}'|sed -e "s/ //g"`
+XSIZE=`echo $SIZE | awk -F 'x' '{print $1}'`
+YSIZE=`echo $SIZE | awk -F 'x' '{print $2}'`
+
+convert -size $SIZE xc:none -draw "roundrectangle 0,0,$XSIZE,$YSIZE,20,20" mask.png
+convert ./photos/photo.png -matte mask.png -compose DstIn -composite ./photos/portrait.png
+rm mask.png
+

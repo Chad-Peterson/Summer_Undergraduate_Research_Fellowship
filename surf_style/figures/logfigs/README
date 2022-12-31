@@ -1,0 +1,29 @@
+To plot the data using gnuplot, do
+
+ gnuplot < GnuPlot.com
+
+to create the output file, integral.pdf, or plot interactively (if you have
+access to the terminal display), using
+
+ gnuplot
+
+then when it comes up, interactively load the file using:
+
+ load GnuPlot.com
+
+Note that the attributes of the plot can be changed by editing the file.
+Gnuplot.com.
+
+
+
+To plot the data using python, do
+
+ python area_plot.py
+
+and also, 
+
+ python error_plot.py
+
+The output can be selected, however in this case it is more difficult to
+construct a combined y-axes plot. 
+

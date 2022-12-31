@@ -1,0 +1,109 @@
+\documentclass[10pt]{article}
+\input{surfpreamble}
+
+%...............................................................................
+% Define user math commands (modify the file preamble-math.tex to suit needs):
+\input{preamble-math}
+
+\begin{document}
+\pagestyle{empty}
+%...............................................................................
+% The following defines the heading of the document.
+% Users should modify this carefully, i.e., a missing comma or brace will cause 
+% difficulties:
+
+\MyDocument[
+author          = {Jane Q.\ Student},
+title           = {Poisson Kernel Estimates of Lexigraphic Matrices},
+major           = {BS Applied Mathematics},
+mentor          = { Faculty Mentor: Dr.\ Joseph Kolibal}
+]
+
+%These values are used throughout the document.
+
+%...............................................................................
+% User configuration options:
+
+% Mark document as Draft (uncomment the following line) 
+%\AddDraft
+
+%...............................................................................
+% The titlepage:
+\mksurftitle
+
+%...............................................................................
+% The abstract:
+\mkabstract{
+In this study we examine the suitability of efficiently inverting, or obtaining
+the solution of problems associated with a class of centrosymmetric matrices
+which arise from problems associated with stochastic interpolation
+on regularly spaced grids. These matrices associated with these linear
+systems are full, and thus the usual range of sparse matrix solvers are
+not available. In particular, the study focuses directly on the properties
+of centrosymmetric matrices as a means to improve the solvability of these
+linear systems, showing that for these centrosymmetric matrices of even order
+it is possible to achieve a factor of 7/8 improvement in the cost of
+matrix inversion using Schur complements. In addition the multiplication
+of these matrices can be speeded up by a factor of two by fully utilizing
+the block antisymmetry of these matrices.
+}
+
+% Start double column:
+\DoubleCol
+%...............................................................................
+% The text of the article:
+\input{SURFtext}
+
+%...............................................................................
+% Bibliography references that are not specifically cited:
+\input{nocites}
+
+% The Bibliography
+\bibliographystyle{plain}
+\bibliography{SURFc}
+
+
+\acknowledgments{
+I would like to thank my advisor Dr.\ Strange Strangelove for
+guidance throughout the project, and Dr.\ Tom Clown for the help with
+everything else, and everyone else for financial support.
+}
+
+
+
+
+% NOTE THAT THE FIGURE MUST BE in ./photos/portrait.png, AND SHOULD HAVE AN
+% x/y ASPECT RATIO OF ABOUT 0.6. THE EXAMPLE IS 129x210 pixels, AND SO IS
+% SCALED BY A FACTOR OF 0.6.
+%
+% USE Imagemagick TO CREATED ROUNDED CORNERS (DONE BY SCRIPT IN ./bin/mkborder).
+%
+\portrait
+{-1.4}   % xoffset for image in cm
+{4.2}    % yoffset for image in cm
+{0.6}    % scale factor applied to image
+%
+% DESCRIPTON ON RIGHT. IT SHOULD BE SHORT.
+%
+{\Author}
+{is a senior in the Department of Mathematics and Physics studying Applied Mathematics at UNH
+\Next
+Her interests are in the development of algorithms for pontificating on
+mathematics, and is interested in an academic career in mathematics.
+\Next
+She has published one student article and has given two student
+presentations during the May, 2014 MAA Conference at UNCC, Topeka, AZ.
+}
+
+
+% ADD VERTICAL SPACE. ADJUST VALUE INSIDE BRACES, OR COMMENT OUT TO GET
+% A FLUSH BOTTOM LAST PAGE.
+%\Strut{0.6}
+
+
+% End double column.
+\EndCol
+
+
+
+\end{document}

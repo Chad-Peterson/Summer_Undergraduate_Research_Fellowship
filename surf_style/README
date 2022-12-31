@@ -1,0 +1,66 @@
+Document: surf_template 
+Revision: Thu Jul 11 07:51:10 EDT 2015
+
+  Copyright (C) 2015 Joseph Kolibal.
+  Permission is granted to copy, distribute and/or modify this document
+  under the terms of the GNU Free Documentation License, Version 1.3
+  or any later version published by the Free Software Foundation;
+  with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+
+................................................................................
+Directions:
+
+Change the document heading, the abstract, the chapters, and the bibliography.
+
+Edit the entries in the 
+  \MyDocument[
+     .
+     .
+     .
+  ]
+
+When editing these, be careful not to introduce and empty lines between
+the entries shown. It is also important to make sure that the commas at the
+end of each line, except the last line, are not removed.
+
+Process the document  using:
+
+ pdflatex SURFc
+ bibtex SURFc
+ pdflatex SURFc
+
+Users have the option to:
+ - Draft versions, marked with a watermark on each page;
+ - Readily change the color of hyperlinks;
+
+................................................................................
+The file uses the hyperref package to link the table of contents entries,
+and all other referenced items in the document. Edit the file
+
+ SURFc.tex
+
+to change the values as shown in the document.
+
+The dependencies in UNHThesis.tex are:
+ ./surfpreamble.tex
+ ./preamble-math.tex
+ ./SURFtext.tex
+ ./nocites.tex
+
+The depndendencies in SURFtext.tex are:
+ ./figures/sheet/pdf
+ ./figures/logfigs/integral.pdf
+ ./photos/portrait.png
+
+
+The figures were generated from the ./figures/logfig directory using:
+ gnuplot < GnuPlot.com
+
+The photo was cropped using gimp to produce the output file,
+ ./photos/photo.png
+
+The corners were rounded using the ImageMagick routines in the script
+ ./bin/mkborders
+
+The conversion of a properly sized (about 100x170 pixels), cropped image 
+can be done using ./bin/mkborders.

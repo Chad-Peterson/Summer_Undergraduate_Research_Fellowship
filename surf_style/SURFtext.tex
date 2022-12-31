@@ -1,0 +1,363 @@
+\section{Background}
+
+A square matrix
+has the same number of rows as it does
+columns, and it represents a linear system in which the number
+of unknowns exactly matches the number of equation, and thus it represents
+a linear system which may have a unique solution.
+The size of an $n\times n$  matrix is referred
+to as the order of the matrix $n$, and
+this equals the number of rows
+or columns
+in a square matrix.
+
+Finally, in terms of notation, it will be convenient to refer to the
+matrix $A$ in terms of its coefficients, using the notation $A = (a_{ij})$.
+For example, if we multiply the matrix $A$ by the constant $c$, then
+$c A = c (a_{ij}) = (c a_{ij})$ and we demonstrate through this notational
+device that matrix  multiplication
+is equivalent to multiplying each entry in the matrix by the constant $c$.
+This standard notational tool will prove useful in regard to demonstrating some
+properties of matrices that are needed in this study.
+
+\section{A special matrix of interest: a centrosymmetric matrix}
+
+A matrix with a particular structure, or a specific form  associated
+with the pattern of the coefficients is called a
+\textit{special matrix}.
+A special matrix
+need not be complicated, as in
+the case of the  diagonal matrix already discussed,  or it can be much more
+intricate in the layout of its coefficients in some regular pattern.
+The primary focus of this study is on centrosymmetric  matrices,
+although even at this level of specialization,
+not every centrosymmetric matrix will be of interest to us.
+The centrosymmetric matrices that are of interest are those
+which arise from problems associated with stochastic interpolation.
+
+Centrosymmetric matrices\footnote{These are sometimes referred to as perplectic matrices.}
+follow a pattern in which the coefficients of the matrix are reflected about
+the center of the matrix~\cite{brookes}, i.e.,
+the coefficients of the matrix $A$ are rotationally symmetric
+about the center. Alternatively, we can define a centrosymmetric
+matrix such that  $A = EAE$,
+where $E = (\textbf{\em e}_n, \textbf{\em e}_{n-1}, \ldots, \textbf{\em e}_1)$ is the exchange matrix, and $\textbf{\em e}_k$ is the $k$-th standard basis vector in $\real^n$.
+In this description, the coefficients of the matrix
+progress lexicographically for the
+first half of the rows in the matrix,
+and then regress through these same coefficients listed in
+reverse lexicographic order from the bottom row to the middle row,
+if the matrix is of even order. If it is of odd order, the middle row
+is symmetric about its center.
+Perhaps the easiest way to conceptualize this pattern is through language
+using palindromes.
+When read backwards, a palindrome produces the same sentence when read both
+forwards and backwards as in the sentence, ``Go hang a salami, I'm a lasagna hog."
+
+
+\lipsum[1-2]
+\section{Developments}
+\lipsum[1-1]
+\smallskip
+
+\renewcommand{\baselinestretch}{1.4}
+\setlength{\tabcolsep}{5pt}
+\begin{Table}
+\centering
+\begin{tabular}[scale=0.55]{ | l | c | c | c | c |c |}
+\hline
+\hline
+$i$ & 1 & 2 & 3 & 4 & 5 \\
+\hline
+$P_i$ & 0.34 & 0.11 & 0.11 & 0.11 & 0.11 1\\
+\hline
+$l(P)$ & 1 & 2 & 2 & 2 & 2 \\
+\hline
+code$(P)$ & 0 & 10 & 11 & 12 & 20  \\
+\hline
+Ideal Length & 0.982    & 2.009    & 2.009 & 2.009 & 2.009  \\
+\hline
+\end{tabular}
+\captionof{table}[Tabulated results base 3]{Tabulated results in base 3 with actual and ideal code length.}
+\end{Table}
+\renewcommand{\baselinestretch}{1.0}
+\index{example!tables}
+
+
+\lipsum[1-2]
+
+\section{Introduction to technical writing}
+This is the introduction section. This should involve a brief discussion
+of the purpose of the report, what concepts are essential, and what
+will be investigated. Use this template for writing your analysis
+files. If you examine this file closely, it has some very useful
+features in it that will set up your paper so that it has a more 
+professional appearance.
+You should also review the rules for typesetting \LaTeX.\ 
+Be mindful of some simple rules in using English:
+\begin{enumerate}
+\item
+Do not use the first person singular in a formal report. Use the first
+person plural or the third person in a passive construction. Thus
+
+\textit{I did this work}, is unacceptable, while,
+\textit{We did this work}, or
+\textit{This work was done}, are acceptable.
+
+\item
+When typesetting mathematics, use punctuation. All math equations must
+read as if they were English sentences. You must end these with a period,
+and put commas where needed.
+
+\item
+Keep the verb tense constant. Do not switch from past to present, and then
+back again, and then back again to the present. There may be a need to
+do this, however be careful when you are doing it.
+
+\item
+Avoid colloquial English.
+These are formal reports. These are not email
+messages to your friends. Be aware that some words in English such
+as \textit{big} are colloquial, and do not appear in formal writing.
+Do not use \textit{very} to modify every adjective. It is usually
+meaningless.
+
+Get a manual on English usage and style from the library, or purchase one
+from the bookstore. Realize that if you plan to stay in academia, or get an
+administrative position in a company or a laboratory, you have to be able
+to communicate effectively. Work on this skill.
+\end{enumerate}
+
+\noindent
+Then be mindful of some simple rules for typesetting \LaTeX:
+\begin{enumerate}
+\item
+Note that the previous sentence beginning this list
+is not indented since it does
+not begin a new paragraph. To avoid indentation,
+use the \verb+\noindent+
+command.
+
+\item
+Note the \verb+\usepackage+  command which changes the font and invokes
+the AMS mathematics
+commands (which simplify typesetting).
+Note the use of the \\
+\verb+ \thispagestyle{empty}+ \\
+command to avoid the printing of 
+page number on the title page.
+
+\item
+Use \LaTeX commands carefully. Please review how to use math mode.
+Many of the reports had math in the text that was not in math
+mode. All symbols, variable, and so on are to be written in math mode.
+We do not use computer science variables to write equations, either,
+thus
+%
+%
+%
+\begin{equation*}
+\sum_{i=1}^{upperbound} x_i^2
+\end{equation*}
+%
+%
+%
+is not acceptable, while in contrast,
+%
+%
+%
+\begin{equation*}
+\sum_{i=1}^{n} x_i^2
+\end{equation*}
+%
+%
+%
+is acceptable. 
+
+\item
+There is no need for asterices in multiplication. Thus $ab$ or $xy$,
+not $a*b$ or $x*y$.
+
+
+\item
+Please note that \LaTeX uses the forward and backward quotes. Thus we write
+\textit{``This is a quote''}, and not \textit{"This is a quote"}.
+Examine this example closely. The forward quote is written using
+the \verb+`+ and not the \verb+'+ quote. The forward quote is typically
+on the upper left of your keyboard, on the tilde key, and below the
+Esc key.
+\end{enumerate}
+
+\subsection{Background on technical writing}
+
+Introduce the mathematical ideas and how they are implemented in this
+section. You should not have any results here.
+Only introduce the mathematics that is necessary to discuss your
+results. For example, the method used to compute each norm may be
+important, however you may choose to either typeset the equations
+or refer to these in your text, or any other reference.
+You may refer to equations using a
+bibliography reference generated using a bib file.
+
+
+
+\subsection{What's in the results}
+
+Discuss the results. This means that you provide details concerning
+the numerical experiments that were performed. This section should
+include graphs, tables and other supporting documentation. It should
+read well, and all items discussed in the text should refer to tables,
+graphs and equations using the reference command in \LaTeX and using
+the format
+\verb+Table~\ref{table:mytable}+,
+\verb+Figure~\ref{figure:myfigure}+ to refer to tables and figures.
+Equations should be referred to using the number
+of the equation in parentheses, i.e., 
+\verb+(\ref{eq:myequation})+.
+You never use the word `equation', except at the beginning of a sentence,
+in which case you use the construction:
+\verb+Eq.~(\ref{eq:myequation})+.
+Note that you need the 
+\verb+~+, i.e., the tilde, to avoid having \LaTeX break the object across a
+line. Always tie counters to their attributes using a tilde or a thin space,
+e.g.,
+\vspace*{0.4em}
+
+ tied using a tilde:  \verb+in Sec.~\ref{sec:topics}+
+ $\implies$ in Sec.~3.7
+
+ tied using a thin space:  \verb+in Sec.\,\ref{sec:topics}+
+ $\implies$ in Sec.\,3.7
+
+ untied (wrong):  \verb+in Sec. \ref{sec:topics}+
+ $\implies$ in Sec. 3.7
+
+\vspace*{0.4em}
+\noindent
+which ties the object Sec.\ to the counter. Not only is the space too large
+after the period when there is no tie, but there is the danger that the
+word, Sec., will go at the end of one line, and the number 3.7 at the start
+of a new line.
+
+
+When doing numerical studies, you must present the results of all of your
+numerical investigations. For the case of polynomial interpolation,
+at the very least these results should have examined the behaviour of
+the polynomials interpolated on $2^k$ points, where $k = 2, 3, \ldots, n$,
+where $n$ is sufficiently large so as to be able to determine numerically
+whether convergence was achieved. A value of $n = 5$, or $n=10$ is
+usually insufficient.
+
+Focus on the error. Numerical methods are approximations. They introduce
+error. Examine the errors, and attempt to understand where they are
+coming from. Examine issues of computational efficiency, and other
+topics as appropriate. Time your results when you run the codes.
+You can always choose not to use the timing results, however if they
+show something important, then you can use it.
+
+
+
+\subsection{What's in the conclusion}
+
+Be brief, however one sentence is not sufficient. Try to concisely
+summarize what was discussed in the results. Avoid rewriting the
+results section. Someone reading your report should be able to 
+understand the writeup from what is written in this section.
+This is one of the most important parts of your report (and probably
+the only one your supervisor or manager will ever read, so you might
+as well learn to write it effectively).
+
+
+
+
+
+
+\section{Using figures}
+We demonstrate a technique to set up and configure
+a figure using the {\tt \verb+\includegraphics+} command embedded into
+the picture environment embedded into the figure environment.
+The picture environment is needed to control the spacing, while the
+figure environment is needed to control the floating of the figures
+in the document. Note that you can refer to the figure with its
+label, i.e., in Figure~\ref{fig:sample} you have the setup of the figure.
+Note that you need to create the figures so that the labels and legends
+scale well with the fonts being used after you have scaled the figure.
+The examples in Fig.\,\ref{fig:sheet} and Fig.\,\ref{fig:sample} should
+be examined in detail as the axes labels are not generated with the
+figures. Instead, they are added as overlays using the
+{\tt \verb+\put+} command in the {\tt picture} environment.
+
+ 
+%..............................................................................
+% SETUP FIGURE USING STANDARD FIGURE ENVIRONMENT.
+% NOTE THAT [H] IS THE ONLY ALLOWABLE OPTION.
+\setlength{\unitlength}{1cm} 
+\begin{figure}[H]
+\begin{picture}(0.0,6.0)(-1.2,-0.1) 
+\includegraphics[scale=0.50]{./figures/sheet}
+%\put(-10.8,4.2){\makebox(0,0){$f(x,y)$ }} 
+\put(-7.9,2.8){\makebox(0,0){$f(x,y)$ }} 
+\put(-6.5,0.5){\makebox(0,0){$x$ }} 
+\put(-1.6,0.2){\makebox(0,0){$y$ }} 
+\end{picture} 
+\captionof{figure}{Example of using a raster image
+which is scaled and annotated with axes.
+\label{fig:sheet} 
+} 
+\end{figure}
+\lipsum[8-9]
+
+\subsection{More nonsense text}
+\lipsum[15-16]
+
+
+% SETUP FIGURE USING ./unhpreamble.tex FIGURE ENVIRONMENT.
+% NOTE THAT THERE IS NO PLACEMENT VALUE.
+
+% BREAK OUT OF TWO COLUMN MODE INTO SINGLE COLUMN MODE.
+\EndCol
+\SingleCol
+%
+% DEFINE FONT FOR FIGURE.
+\newcommand{\Hfs}{\usefont{T1}{phv}{m}{n}\fontsize{8.4}{8.0}\selectfont}
+%
+\setlength{\unitlength}{1cm}
+\begin{Figure}
+\begin{picture}(0.0,7.7)(-1.5,0.0)
+\put(0.2,3.0){\rotatebox[origin=lb]{90}{
+ {\Hfs Estimate of} \ ${\cal I}(N)$ }}
+\put(14.1,3.0){\rotatebox[origin=lb]{90}{
+  {\Hfs Error}, $\varepsilon = \left| {\cal V} - {\cal I}(N) \right|$}}
+\put(7.0,0.0){\makebox(0,0){$N$ }}
+\includegraphics[scale=1.1]{./figures/logfigs/integral}
+\end{picture}
+\captionof{figure}{
+An approximation ${\cal I}(N)$ to the value of the integral
+for $\int_0^1 e^{x^2}dx$ obtained using a Monte Carlo approach.
+The estimate for ${\cal I}(N)$ is a function of the number
+of samples $N$, and the value of $I \approx 0.7468241328 \equiv {\cal V}$
+was obtained using Wolfram Alpha$^\circledR$.
+\label{fig:sample}
+}
+\end{Figure}
+%
+% GO BACK TO TWO COLUMN MODE.
+\DoubleCol
+
+
+
+
+
+
+\subsection{Using another figure}
+\lipsum[3-4]
+
+\subsection{Even more results}
+\lipsum[9-10]
+\section{Conclusions}
+Everything we have done is completely correct based on the theory
+of everything.
+\index{theory of everything}
+\lipsum[11-12]
+Where can we find information about this thesis style? 
+Go to \Urls{http://math.newhaven.edu/mathphysics}.
