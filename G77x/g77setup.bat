@@ -1,3 +1,0 @@
-SET OLDPATH=%PATH%
-PATH=c:\g77\bin;%PATH%
-SET LIBRARY_PATH=c:\g77\lib
